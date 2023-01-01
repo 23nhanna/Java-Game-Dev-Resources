@@ -1,0 +1,9 @@
+private boolean boxCollision (BoundingBox a, BoundingBox b) {
+		if (b == null) return false;
+		else {
+			if (a.getLeft() < b.getRight() && a.getRight() > b.getLeft() && a.getTop() < b.getBottom() && a.getBottom() > b.getTop()) return true;
+			else return false;
+		}
+		
+		
+	}
