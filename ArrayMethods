@@ -1,0 +1,145 @@
+/*
+ * Nadia Hanna
+ * Array Methods
+ * This is a class that has methods that allows me to manipulate arrays in an easier fassion (I just don't want to use ArrayList)
+ */
+
+import java.util.Arrays;
+
+public class ArrayMethods {
+
+	//Append methods
+	
+	//One for buttons
+	public static Button[] append(Button[] in, Button valIn) {
+		Button[] copy = (Button[]) Arrays.copyOf(in, in.length + 1); //Make copy with one extra space
+		copy[copy.length - 1] = valIn; //Assign extra space to valIn
+		return copy;
+	}
+	
+	public static int[] append(int[] in, int valIn) {
+		int[] copy = (int[]) Arrays.copyOf(in, in.length + 1); //Make copy with one extra space
+		copy[copy.length - 1] = valIn; //Assign extra space to valIn
+		return copy;
+	}
+	public static double[] append(double[] in, double valIn) {
+		double[] copy = (double[]) Arrays.copyOf(in, in.length + 1); //Make copy with one extra space
+		copy[copy.length - 1] = valIn; //Assign extra space to valIn
+		return copy;
+	}
+	public static boolean[] append(boolean[] in, boolean valIn) {
+		boolean[] copy = (boolean[]) Arrays.copyOf(in, in.length + 1); //Make copy with one extra space
+		copy[copy.length - 1] = valIn; //Assign extra space to valIn
+		return copy;
+	}
+	public static String[] append(String[] in, String valIn) {
+		String[] copy = (String[]) Arrays.copyOf(in, in.length + 1); //Make copy with one extra space
+		copy[copy.length - 1] = valIn; //Assign extra space to valIn
+		return copy;
+	}
+	public static char[] append(char[] in, char valIn) {
+		char[] copy = (char[]) Arrays.copyOf(in, in.length + 1); //Make copy with one extra space
+		copy[copy.length - 1] = valIn; //Assign extra space to valIn
+		return copy;
+	}
+	
+	public static Type[] append(Type[] in, Type valIn) {
+		Type[] copy = (Type[]) Arrays.copyOf(in, in.length + 1); //Make copy with one extra space
+		copy[copy.length - 1] = valIn; //Assign extra space to valIn
+		return copy;
+	}
+	
+	//Pop methods
+	public static int[] pop(int[] in, int index) {
+		int[] copy = new int[0]; //Temp array
+		
+		for (int i = 0; i < in.length; i++) { //Cycle through in array
+			if (i != index) { //If we are not at the index to pop, append to the temp array at the in array index
+				copy = append(copy, in[i]);
+			}
+		}
+		return copy;
+	}
+	public static double[] pop(double[] in, int index) {
+		double[] copy = new double[0]; //Temp array
+		
+		for (int i = 0; i < in.length; i++) { //Cycle through in array
+			if (i != index) { //If we are not at the index to pop, append to the temp array at the in array index
+				copy = append(copy, in[i]);
+			}
+		}
+		return copy;
+	}
+	public static boolean[] pop(boolean[] in, int index) {
+		boolean[] copy = new boolean[0]; //Temp array
+		
+		for (int i = 0; i < in.length; i++) { //Cycle through in array
+			if (i != index) { //If we are not at the index to pop, append to the temp array at the in array index
+				copy = append(copy, in[i]);
+			}
+		}
+		return copy;
+	}
+	public static String[] pop(String[] in, int index) {
+		String[] copy = new String[0]; //Temp array
+		
+		for (int i = 0; i < in.length; i++) { //Cycle through in array
+			if (i != index) { //If we are not at the index to pop, append to the temp array at the in array index
+				copy = append(copy, in[i]);
+			}
+		}
+		return copy;
+	}
+	public static char[] pop(char[] in, int index) {
+		char[] copy = new char[0]; //Temp array
+		
+		for (int i = 0; i < in.length; i++) { //Cycle through in array
+			if (i != index) { //If we are not at the index to pop, append to the temp array at the in array index
+				copy = append(copy, in[i]);
+			}
+		}
+		return copy;
+	}
+
+	//Find in methods
+	public static boolean isIn(int[] inArr, int key) {
+		boolean in = false; //Boolean for key in array
+		
+		for (int i = 0; i < inArr.length; i++) { //Iterate through array
+			if (inArr[i] == key) in = true; //Check for key in array and return true if key is in array
+		}
+		return in;
+	}
+	public static boolean isIn(String[] inArr, String key) {
+		boolean in = false; //Boolean for key in array
+		
+		for (int i = 0; i < inArr.length; i++) { //Iterate through array
+			if (inArr[i].equals(key)) in = true; //Check for key in array and return true if key is in array
+		}
+		return in;
+	}
+	public static boolean isIn(char[] inArr, char key) {
+		boolean in = false; //Boolean for key in array
+		
+		for (int i = 0; i < inArr.length; i++) { //Iterate through array
+			if (inArr[i] == key) in = true; //Check for key in array and return true if key is in array
+		}
+		return in;
+	}
+	public static boolean isIn(double[] inArr, double key) {
+		boolean in = false; //Boolean for key in array
+		
+		for (int i = 0; i < inArr.length; i++) { //Iterate through array
+			if (inArr[i] == key) in = true; //Check for key in array and return true if key is in array
+		}
+		return in;
+	}
+	public static boolean isIn(boolean[] inArr, boolean key) {
+		boolean in = false; //Boolean for key in array
+		
+		for (int i = 0; i < inArr.length; i++) { //Iterate through array
+			if (inArr[i] == key) in = true; //Check for key in array and return true if key is in array
+		}
+		return in;
+	}
+}
